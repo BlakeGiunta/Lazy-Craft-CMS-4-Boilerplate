@@ -52,3 +52,4 @@ config.codekit3
 prepros-6.config
 
 
+.ddev/config.yaml
