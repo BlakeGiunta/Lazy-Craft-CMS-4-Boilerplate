@@ -3,4 +3,8 @@
 @import 'tailwindcss/components';
 @import '_components.css';
 @import 'tailwindcss/utilities';
-@import 'flowbite/dist/flowbite.css';
+@import 'flowbite.css';
+
+* {
+  body: red !important;
+}

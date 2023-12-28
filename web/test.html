@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flowbite Test</title>
+    <!-- Import Flowbite CSS -->
+    <link href="assets/flowbite/app.css" rel="stylesheet">
+</head>
+<body>
+    <h1>Test page</h1>
+    <div class="container mx-auto p-4">
+        <div id="accordion-collapse" data-accordion="collapse">
+            <h2 id="accordion-collapse-heading-1">
+                <button type="button" class="accordion-button" data-accordion-target="#accordion-collapse-body-1" aria-expanded="false" aria-controls="accordion-collapse-body-1">
+                    Accordion Item #1
+                </button>
+            </h2>
+            <div id="accordion-collapse-body-1" class="hidden" aria-labelledby="accordion-collapse-heading-1">
+                <div class="p-5">
+                    This is the first item's accordion body. It is hidden by default until the collapse button is clicked.
+                </div>
+            </div>
+            <h2 id="accordion-collapse-heading-2">
+                <button type="button" class="accordion-button" data-accordion-target="#accordion-collapse-body-2" aria-expanded="false" aria-controls="accordion-collapse-body-2">
+                    Accordion Item #2
+                </button>
+            </h2>
+            <div id="accordion-collapse-body-2" class="hidden" aria-labelledby="accordion-collapse-heading-2">
+                <div class="p-5">
+                    This is the second item's accordion body. Click the button to toggle it.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Import Flowbite JS -->
+    <script src="assets/flowbite/flowbite.js"></script>
+</body>
+</html>

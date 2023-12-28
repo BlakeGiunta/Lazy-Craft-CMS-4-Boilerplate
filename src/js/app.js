@@ -1,7 +1,7 @@
 import '../css/app.css';
-
 import 'lazysizes';
 import Alpine from 'alpinejs';
+import 'flowbite/dist/flowbite.js';
 
 console.log('Hello World');
 
