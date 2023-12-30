@@ -7,12 +7,12 @@
     date: null,
     image: null,
     button: null,
-    classWrapper: "flex flex-col bg-white dark:bg-black rounded-lg shadow-lg overflow-hidden",
-    classContent: "",
-    classImage: "",
-    classText: "p-6",
-    classRichText: "prose dark:prose-invert",
-    classButton: "px-6 pb-6 mt-auto",
+    classWrapper: "max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700",
+    classContent: "p-5",
+    classImage: "rounded-t-lg",
+    classText: "",
+    classRichText: "mb-3 font-normal text-gray-700 dark:text-gray-400",
+    classButton: "inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800",
     aspectW: "16",
     aspectH: "9"
   }
@@ -23,47 +23,28 @@
   data: data is defined ? defaults.data|merge(data) : defaults.data
 } %}
 
-<div class="sprig-card {{ props.data.classWrapper }}">
+<div class="{{ props.data.classWrapper }}">
+  {% if props.data.image %}
+    <a href="{{ props.data.button }}">
+      <img class="{{ props.data.classImage }}" src="{{ props.data.image.getUrl() }}" alt="{{ props.data.image.alt }}" />
+    </a>
+  {% endif %}
+  
   <div class="{{ props.data.classContent }}">
-    {% if props.data.image %}
-      <div class="{{ props.data.classImage }} aspect-[{{ props.data.aspectW }}/{{ props.data.aspectH }}]">
-        {% include "_components/image.twig" with {
-          data: {
-            image: props.data.image,
-            sizes: [640],
-            ratio: props.data.aspectW ~ ":" ~ props.data.aspectH
-          }
-        } only %}
-      </div>
-    {% endif %}
-    <div class="{{ props.data.classText }}">
-      {% if props.data.topline or props.data.date %}
-        <div class="flex items-center justify-between pb-2 mb-4 border-b dark:border-gray-800">
-          {% if props.data.topline %}
-            <p class="text-beta dark:text-beta-400">
-              {{ props.data.topline }}
-            </p>
-          {% endif %}
-          {% if props.data.date %}
-            <p class="mb-0 text-sm text-gray-400">
-              {{ props.data.date|date("M d, Y") }}
-            </p>
-          {% endif %}
-        </div>
-      {% endif %}
-      <div class="{{ props.data.classRichText }}">
-        <h3>
-          {{ props.data.headline }}
-        </h3>
-        {{ props.data.text }}
-      </div>
+    <a href="{{ props.data.button }}">
+      <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+        {{ props.data.headline }}
+      </h5>
+    </a>
+    <div class="{{ props.data.classRichText }}">
+      {{ props.data.text }}
     </div>
-  </div>
-  <div class="{{ props.data.classButton }}">
-    {% include "_components/button.twig" with {
-      data: {
-        link: props.data.button
-      }
-    } only %}
+    <a href="{{ props.data.button }}" class="{{ props.data.classButton }}">
+      Read more
+      <!-- SVG icon here -->
+      <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+      </svg>
+    </a>
   </div>
 </div>

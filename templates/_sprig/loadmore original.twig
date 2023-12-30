@@ -30,7 +30,7 @@
         s-select="{{props.data["sprig-select"]}}"
         {# s-indicator="#spinner" #}
         s-val:offset="{{ props.data.offset + props.data.limit }}"
-        class="btn text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5"
+        class="btn btn--beta"
         {{ sprig.trigger == "load-more-oob" ? 's-swap-oob="true"' }}>
         <span>{{props.data.label}}</span>
         <svg class="w-5 h-5 ml-3 text-white htmx-indicator animate-spin" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">

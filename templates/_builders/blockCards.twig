@@ -1,17 +1,17 @@
 <section class="blocks blocks--transparent">
   <div class="{{ _globals.get("blocksExtraLarge") }}">
     <div class="grid gap-6 lg:grid-cols-3">
-      {% for card in self.cards.with({
-        with: ["image"]
-      }).collect() %}
-        {% include "_components/card.twig" with {
-          data: {
-            headline: card.headline,
-            text: card.text,
-            image: card.image.collect().first() ?? null,
-            button: card.button
-          }
-        } only %}
+      {% for card in self.cards.with({ with: ["image"] }).collect() %}
+        <div class="card-block">
+          {% include "_components/card.twig" with {
+            data: {
+              headline: card.headline,
+              text: card.text,
+              image: card.image.collect().first() ?? null,
+              button: card.button
+            }
+          } only %}
+        </div>
       {% endfor %}
     </div>
   </div>

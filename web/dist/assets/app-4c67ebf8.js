@@ -7,4 +7,4 @@ ${i?'Expression: "'+i+`"
             entryCount(section: "news")
           }
           `,variables:{}})}).then(t=>t.json()).then(t=>{this.count=t.data.entryCount,console.log(t.data.entryCount)})}}));os.start();
-//# sourceMappingURL=app-88b4e958.js.map
+//# sourceMappingURL=app-4c67ebf8.js.map

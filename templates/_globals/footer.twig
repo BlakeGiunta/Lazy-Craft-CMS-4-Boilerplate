@@ -1,5 +1,15 @@
-<footer class="h-16 mt-24 bg-white dark:bg-black">
-  <div class="flex items-center justify-center h-full max-w-screen-xl px-4 mx-auto">
-    {{ "now"|date("Y") }} - Lazy Craft CMS 4 Boilerplate
-  </div>
+<footer class="bg-white rounded-lg shadow m-4 dark:bg-gray-800">
+    <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
+        <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">
+            © {{ "now"|date("Y") }} - Lazy Craft CMS 4 Boilerplate
+        </span>
+        <!-- Add your navigation links here if needed -->
+        <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
+            <!-- Example navigation links -->
+            <li>
+                <a href="#" class="hover:underline me-4 md:me-6">About</a>
+            </li>
+            <!-- Add more links as needed -->
+        </ul>
+    </div>
 </footer>
