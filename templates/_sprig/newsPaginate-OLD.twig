@@ -40,7 +40,7 @@
             Show all
           </option>
           {% for item in categories %}
-            <option value="{{ item.slug }}" {{ cat == item.slug ? "selected" }}>
+            <option value="{{ item.slug }" {{ cat == item.slug ? "selected" }}>
               {{ item.title }}
             </option>
           {% endfor %}
