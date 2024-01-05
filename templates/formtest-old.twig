@@ -50,6 +50,7 @@
                   First name
                 </label>
                 <div class="mt-1">
+                  <input type="text" name="first-name" id="first-name" autocomplete="given-name" class="form-input" />
                   <input type="text" name="first-name" id="first-name" autocomplete="given-name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" />
                 </div>
               </div>
@@ -59,7 +60,7 @@
                   Last name
                 </label>
                 <div class="mt-1">
-                  <input type="text" name="last-name" id="last-name" autocomplete="family-name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" />
+                  <input type="text" name="last-name" id="last-name" autocomplete="family-name" class="form-input" />
                 </div>
               </div>
 
@@ -68,14 +69,14 @@
                   Email address
                 </label>
                 <div class="mt-1">
-                  <input id="email" name="email" type="email" autocomplete="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" />
+                  <input id="email" name="email" type="email" autocomplete="email" class="form-input" />
                 </div>
               </div>
 
               <div class="sm:col-span-3">
                 <label for="country" class="block text-sm font-medium text-gray-700 dark:text-gray-400">Country</label>
                 <div class="mt-1">
-                  <select id="country" name="country" autocomplete="country-name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                  <select id="country" name="country" autocomplete="country-name" class="form-select">
                     <option>
                       United States
                     </option>
@@ -95,18 +96,17 @@
                 </label>
                 <div class="mt-1">
                   <input type="text"
-                        name="street-address"
-                        id="street-address"
-                        autocomplete="street-address"
-                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" />
+                    name="street-address"
+                    id="street-address"
+                    autocomplete="street-address"
+                    class="form-input" />
                 </div>
               </div>
-
 
               <div class="sm:col-span-2">
                 <label for="city" class="block text-sm font-medium text-gray-700 dark:text-gray-400">City</label>
                 <div class="mt-1">
-                  <input type="text" name="city" id="city" autocomplete="address-level2" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" />
+                  <input type="text" name="city" id="city" autocomplete="address-level2" class="form-input" />
                 </div>
               </div>
 
@@ -115,7 +115,7 @@
                   State / Province
                 </label>
                 <div class="mt-1">
-                  <input type="text" name="region" id="region" autocomplete="address-level1" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" />
+                  <input type="text" name="region" id="region" autocomplete="address-level1" class="form-input" />
                 </div>
               </div>
 
@@ -128,7 +128,7 @@
                     name="postal-code"
                     id="postal-code"
                     autocomplete="postal-code"
-                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" />
+                    class="form-input" />
                 </div>
               </div>
             </div>
@@ -154,7 +154,7 @@
                 <div class="mt-4 space-y-4">
                   <div class="relative flex items-start">
                     <div class="flex items-center h-5">
-                      <input id="comments" name="comments" type="checkbox" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800" />
+                      <input id="comments" name="comments" type="checkbox" class="form-checkbox" />
                     </div>
                     <div class="ml-3 text-sm">
                       <label for="comments" class="font-medium text-gray-700 dark:text-gray-400">Comments</label>
@@ -165,7 +165,7 @@
                   </div>
                   <div class="relative flex items-start">
                     <div class="flex items-center h-5">
-                      <input id="candidates" name="candidates" type="checkbox" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800" />
+                      <input id="candidates" name="candidates" type="checkbox" class="form-checkbox" />
                     </div>
                     <div class="ml-3 text-sm">
                       <label for="candidates" class="font-medium text-gray-700 dark:text-gray-400">Candidates</label>
@@ -176,7 +176,7 @@
                   </div>
                   <div class="relative flex items-start">
                     <div class="flex items-center h-5">
-                      <input id="offers" name="offers" type="checkbox" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800" />
+                      <input id="offers" name="offers" type="checkbox" class="form-checkbox" />
                     </div>
                     <div class="ml-3 text-sm">
                       <label for="offers" class="font-medium text-gray-700 dark:text-gray-400">Offers</label>
@@ -198,19 +198,19 @@
                   <div class="flex items-center">
                     <input id="push-everything" name="push-notifications" type="radio" class="form-radio" />
                     <label for="push-everything"
-                      class="block ms-2  text-sm font-medium text-gray-900 dark:text-gray-300">
+                      class="block ml-3 text-sm font-medium text-gray-700 dark:text-gray-400">
                       Everything
                     </label>
                   </div>
                   <div class="flex items-center">
                     <input id="push-email" name="push-notifications" type="radio" class="form-radio" />
-                    <label for="push-email" class="block ms-2  text-sm font-medium text-gray-900 dark:text-gray-300">
+                    <label for="push-email" class="block ml-3 text-sm font-medium text-gray-700 dark:text-gray-400">
                       Same as email
                     </label>
                   </div>
                   <div class="flex items-center">
                     <input id="push-nothing" name="push-notifications" type="radio" class="form-radio" />
-                    <label for="push-nothing" class="block ms-2  text-sm font-medium text-gray-900 dark:text-gray-300">
+                    <label for="push-nothing" class="block ml-3 text-sm font-medium text-gray-700 dark:text-gray-400">
                       No push notifications
                     </label>
                   </div>
